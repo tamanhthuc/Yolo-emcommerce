@@ -1,0 +1,28 @@
+.btn {
+    border: 0;
+    outline: 0;
+    color: $btn-main-color;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+
+    @include mobile {
+        font-size: 1rem;
+    }
+
+    &__txt {
+        padding: 1rem 2rem;
+    }
+    &-sm {
+        font-size: 1rem;
+    }
+    &-sm &__txt {
+         padding: 0.7rem 1.5rem;
+    }
+    &-xl {
+        width: 100%;
+    }
+}

@@ -1,0 +1,55 @@
+.section-sell__best {
+    
+
+    &__description {
+        font-size: 12px;
+        line-height: 1.5;
+        margin: 20px 0;
+    }
+
+    &__nav {
+        @include flex(center,center);
+        flex-wrap: wrap;
+        margin: 30px 0;
+        font-size: 14px;
+
+        &__item {
+            margin-left: 20px;
+            text-transform: capitalize;
+            cursor: pointer;
+            margin-top: 15px;
+
+            @include mobile {
+                margin-left: 10px;
+                border: 1px solid #ccc;
+                padding: 2px 4px;
+            }
+
+            &.active {
+                color: $main-color;
+            }
+        }
+    }
+    &__btn {
+        position: absolute;
+        right: 0;      
+        font-size: 16px;
+        @include flex(center,center);
+        margin-right: 10px;
+        margin-top: 20px;
+        
+
+
+        &__icon {
+            color: $main-color !important;
+            @include flex(center,center);
+            i {
+                font-size: 25px;
+            }
+        }
+
+        &__name {
+             color: $main-color !important;
+        }
+    }
+}

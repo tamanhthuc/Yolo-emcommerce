@@ -1,0 +1,11 @@
+.margin-header {
+    margin-top: $header-height;
+
+    @include tablet {
+        margin-top: $header-tablet-height;
+    }
+
+      @include mobile {
+        margin-top: $header-mobile-height;
+    }
+}

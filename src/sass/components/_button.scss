@@ -1,0 +1,67 @@
+.btn {
+    @include flex(center, center);
+    background-color:rgba(37,37,111,.74);
+    color: #fff;
+    font-size: 1rem;
+    position: relative;
+
+
+    &__item {
+        @include flex(center, center);
+        padding: 10px 0;
+        font-size: 10px;
+        cursor: pointer !important;
+
+        a {
+            display: flex !important;
+            @include flex(center, center);
+
+        }
+
+        &:hover {
+            color: $main-color;
+        }
+    }
+
+    &__detail:after {
+        content: "|";
+        margin: 0 12px;
+    }
+
+
+    &__detail {   
+
+        a {
+            display: block;
+        }
+        @include flex(center, center);
+        &__name {
+            margin-right: 4px; 
+           
+
+                    
+        }
+
+        &__icon {
+            font-size: 16px;
+            @include flex(center, center);
+                      
+        }
+    }
+
+    &__buy {
+      
+        &__name {
+            margin-right: 2px;
+        }
+
+        &__icon {
+            font-size: 18px;
+            @include flex(center, center);
+           
+            
+        }
+    }
+    
+    
+}  

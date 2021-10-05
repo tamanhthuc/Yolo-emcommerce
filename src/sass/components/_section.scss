@@ -1,0 +1,16 @@
+.section {
+    margin-bottom: 60px;
+
+    & > * ~ * {
+        margin-top: 50px;
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 600;
+        
+    }
+
+}

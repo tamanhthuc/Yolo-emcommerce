@@ -1,0 +1,27 @@
+.slick-slider {
+
+    .slick-prev, .slick-next {
+        width: 50px;
+        height: 50px;       
+        z-index: 1;       
+        box-shadow: 0 0 4px 1px #ccc;
+        transform: translate(0, -100%);
+
+         @include mobile {
+             width: 30px; 
+             height: 30px;
+             transform: translate(20%, -100%);
+         }      
+    }
+    .slick-prev::before {
+        font-size: 40px;
+        color: #bababa;
+
+    }
+
+    .slick-next::before {
+        font-size: 40px;
+        color: #bababa;
+
+    }
+}
