@@ -80,25 +80,6 @@ const ProductView2 = (props) => {
     }
   };
 
-  const goToCart = () => {
-    if (check()) {
-      let newItem = {
-        slug: product.slug,
-        color: color,
-        size: size,
-        price: product.price,
-        quantity: quantity,
-      };
-
-      if (dispatch(addItem(newItem))) {
-        alert("Sucess");
-        props.history.push("/cart");
-      } else {
-        alert("Fail");
-      }
-    }
-  };
-
   return (
     <div className="product-display">
       <Grid col={2} gap={30} smCol={2}>
