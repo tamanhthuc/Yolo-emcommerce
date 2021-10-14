@@ -1,7 +1,7 @@
 const category = [
   {
     display: "Áo nữ",
-    categorySlug: "ao-nu",
+    categorySlug: "ao-thun",
   },
   {
     display: "Quần nữ",
@@ -17,7 +17,7 @@ const category = [
   },
   {
     display: "Phụ kiện nữ",
-    categorySlug: "phụ kiện nữ",
+    categorySlug: "phu-kien-nu",
   },
 ];
 

@@ -6,6 +6,7 @@ import numberWithCommans from "../utils/numberWithCommans";
 import Button2 from "../components/Button2";
 import { Link } from "react-router-dom";
 import CartItems from "../components/CartItems";
+
 const Cart = (props) => {
   let cartItems = useSelector((state) => state.cartItems.value);
 

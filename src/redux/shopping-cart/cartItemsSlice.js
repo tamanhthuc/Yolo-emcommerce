@@ -38,7 +38,7 @@ export const cartItemsSlice = createSlice({
             color: newItem.color,
             size: newItem.size,
             price: newItem.price,
-            quantity: newItem.quantity + duplicate[0].quantity,
+            quantity: newItem.quantity,
           },
         ];
       } else {

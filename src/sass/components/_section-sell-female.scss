@@ -13,9 +13,15 @@
         &__banner{
             min-height: 300px;
 
+
+
             img {
                 
                 height: 100%;
+
+                @include mobile {
+                    height: auto !important;
+                }
             }
         }
         &__item {
@@ -29,7 +35,7 @@
             z-index: 3;
 
              @include mobile {
-                    transform: translateY(-28%);
+                    transform: translateY(-18%);
             }
            
 

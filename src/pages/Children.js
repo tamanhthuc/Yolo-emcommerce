@@ -14,6 +14,7 @@ import productData from "../assets/fake-data/catalog/maleCatalog/products";
 import category from "../assets/fake-data/catalog/category";
 import colors from "../assets/fake-data/catalog/product-color";
 import size from "../assets/fake-data/catalog/product-size";
+import Container3 from "../components/Container3";
 
 const Children = () => {
   const productList = productData.getAllProducts();
@@ -124,7 +125,7 @@ const Children = () => {
         <MarginTopHeader />
         <Section>
           <SectionBody>
-            <Grid col={4} mdCol={2} smCol={1} gap={20}>
+            <Container3>
               {policy.map((item, index) => (
                 <Link key={index} to="/policy">
                   <PolicyCard
@@ -134,7 +135,7 @@ const Children = () => {
                   />
                 </Link>
               ))}
-            </Grid>
+            </Container3>
           </SectionBody>
         </Section>
       </div>

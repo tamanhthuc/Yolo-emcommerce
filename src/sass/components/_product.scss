@@ -112,6 +112,7 @@
                 font-weight: 600;
 
                 margin-bottom: 1rem;
+                margin-right: 15px;
                 span {
                     color: normal;
                     font-size: 1.2rem;
@@ -155,8 +156,8 @@
                         border-radius: 50%;
 
                          @include mobile {
-                            width: 25px;
-                            height: 25px;
+                            width: 15px;
+                            height: 15px;
                         }
                     }
 
@@ -183,7 +184,9 @@
             &__quantity {
                 @include flex(flex-start, flex-start);
 
-                margin-left: 15px;
+                
+
+               
                 &__btn {
                     @include flex(center, center);
                     width: 25px;
@@ -191,6 +194,12 @@
                     border: 2px solid $txt-second-color;
                     font-size: 1.5rem;
                     cursor: pointer;
+
+                    @include mobile {
+                        
+                         height: 30px;
+                         width: 35px;
+                    }
                 }
 
                  &__input {
@@ -200,6 +209,11 @@
                     font-size: 1.5rem;
                     border-top: 2px solid $txt-second-color;
                     border-bottom: 2px solid $txt-second-color;
+
+                    @include mobile {
+                        height: 30px;
+                        width: 80px;
+                    }
                 }
             }
 

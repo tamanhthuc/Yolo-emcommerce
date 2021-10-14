@@ -44,6 +44,7 @@ const CartItems = (props) => {
           <Link to={`/catalog/${item.slug}`}>
             {`${item.product.title} - ${item.color} - ${item.size}`}
           </Link>
+          <p onClick={() => removeCartItem()}>Xóa</p>
         </div>
 
         <div className="cart__item__info__price">
@@ -69,9 +70,6 @@ const CartItems = (props) => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="cart__item__del">
-        <i className="bx bx-trash" onClick={() => removeCartItem()}></i>
       </div>
     </div>
   );

@@ -16,8 +16,8 @@ const Container = (props) => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          row: 2,
-          slidesPerRow: 2,
+          row: 1,
+          slidesPerRow: 1,
         },
       },
     ],

@@ -17,8 +17,8 @@ const Routes = () => {
       <Route path="/nam/:slug" component={Product} />
       <Route path="/nam" component={Catalog} />
       <Route path="/cart" component={Cart} />
-      <Route path="/nu" component={Female} />
       <Route path="/nu/:slug" component={FemaleProduct} />
+      <Route path="/nu" component={Female} />
       <Route path="/tre-em" component={Children} />
       <Route path="/tre-em:slug" component={ChildrenProduct} />
     </Switch>

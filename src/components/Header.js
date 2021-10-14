@@ -1,7 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
+
 import { Link, useLocation } from "react-router-dom";
+import productData from "../assets/fake-data/catalog/maleCatalog/products";
 import logo from "../assets/images/logo.png";
+import ShowItem from "./ShowItem";
+import numberWithCommas from "../utils/numberWithCommans";
+import Button2 from "./Button2";
+import Grid from "./Grid";
 const Header = () => {
   const contactNav = [
     {
@@ -78,6 +84,16 @@ const Header = () => {
 
   const headerRef = useRef(null);
 
+  let cartItems = useSelector((state) => state.cartItems.value);
+
+  const [cartProducts, setCartProducts] = useState(
+    productData.getCartItemsDetail(cartItems)
+  );
+
+  useEffect(() => {
+    setCartProducts(productData.getCartItemsDetail(cartItems));
+  }, [cartItems]);
+
   useEffect(() => {
     var lastScrollTop = 0;
     const handleEvent = () => {
@@ -102,13 +118,18 @@ const Header = () => {
     };
   }, []);
 
-  let cartItems = useSelector((state) => state.cartItems.value);
-
   const [totalProduct, setTotalProduct] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   useEffect(() => {
     setTotalProduct(
       cartItems.reduce((total, item) => total + Number(item.quantity), 0)
+    );
+    setTotalPrice(
+      cartItems.reduce(
+        (total, item) => total + Number(item.quantity) * Number(item.price),
+        0
+      )
     );
   }, [cartItems]);
 
@@ -194,6 +215,41 @@ const Header = () => {
                 <span>
                   <i className="bx bx-caret-down-circle"></i>
                 </span>
+              </div>
+
+              <div className="header__main__info__cart__item">
+                {cartItems.length > 0 && (
+                  <div className="header__main__info__cart__item__list">
+                    {cartProducts.map((item, index) => (
+                      <ShowItem key={index} item={item} />
+                    ))}
+
+                    <div className="header__main__info__cart__item__price">
+                      <div className="header__main__info__cart__item__price__name">
+                        Thành tiền:
+                      </div>
+                      <div className="header__main__info__cart__item__price__number">
+                        {numberWithCommas(totalPrice)}Đ
+                      </div>
+                    </div>
+
+                    <div className="header__main__info__cart__item__btn">
+                      <Grid col={2} mdCol={2} gap={10}>
+                        <Link to="/cart">
+                          <div className="header__main__info__cart__item__btn__cart">
+                            Giỏ hàng
+                          </div>
+                        </Link>
+                        <Link to="/checkout">
+                          <div className="header__main__info__cart__item__btn__checkout">
+                            Thanh toán
+                          </div>
+                        </Link>
+                      </Grid>
+                    </div>
+                  </div>
+                )}
+                {cartItems.length === 0 && <p>Giỏ hàng của bạn trống</p>}
               </div>
             </div>
           </div>

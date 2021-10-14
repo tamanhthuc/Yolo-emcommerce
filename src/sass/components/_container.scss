@@ -8,20 +8,45 @@
         transform: translate(0, -100%);
 
          @include mobile {
-             width: 30px; 
-             height: 30px;
+             width: 35px; 
+             height: 35px;
              transform: translate(20%, -100%);
          }      
     }
     .slick-prev::before {
-        font-size: 40px;
+        font-size: 30px;
         color: #bababa;
 
     }
 
     .slick-next::before {
-        font-size: 40px;
+        font-size: 30px;
         color: #bababa;
 
     }
+    // .slick-next {
+    //     right: -15px;
+
+    //     @include mobile {
+    //         right: 0;
+    //     }
+    // }
+
+     .slick-prev {
+        left: -15px;
+
+        @include mobile {
+            right: 0;
+        }
+    }
+
+    .slick-next {
+        right: -15px;
+
+        @include mobile {
+            right: 0;
+        }
+    }
+
+    
 }

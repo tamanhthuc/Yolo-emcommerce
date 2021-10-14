@@ -348,6 +348,12 @@
                  background: #eee;
                   padding: 10px ;
 
+                  position: relative;
+
+                  @include mobile {
+                      background: #fff;
+                  }
+
                  margin-right: 20px;
 
                  @include tablet {
@@ -423,7 +429,70 @@
                       @include mobile {
                           display: none;
                       }
-                  }
+
+                    }
+                    &__item {
+                      position: absolute;
+                      top: 100%;
+                      min-width: 350px;
+                      min-height: 60px;
+                      right: -20px;
+                      z-index: 3;
+                      border: 1px solid #eee;
+                      background: #fff;
+                     
+                      font-weight: 500;
+                      display: none;
+                    
+
+                      p{
+                          margin-left: 20px;
+                           line-height: 60px;
+                      }
+
+                      &__price {
+                          margin-top: 20px;
+                          @include flex(flex-start, space-between);
+                          margin-right: 10px;
+                         font-size: 8px;
+
+                          &__name {
+                              margin-left: 10px;
+                          }
+
+                          &__number {
+                              font-weight:600;
+                               
+                          }
+                      }
+
+                      &__btn {
+                          margin: 20px 10px;
+                            color: #fff;
+                            text-align: center;
+
+                          a:hover {
+
+                            color: #fff;
+                          }
+                            
+                          &__cart {
+                              background-color: #4267b2;
+                              padding: 10px 0;
+                          }
+
+                          &__checkout {
+                              background-color: $main-color;
+                              padding: 10px 0;
+                          }
+
+                        
+                      }
+                    }
+
+                    &:hover &__item{
+                        display:block;
+                    }
             }
 
          

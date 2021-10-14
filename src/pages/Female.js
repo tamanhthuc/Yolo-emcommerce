@@ -1,19 +1,20 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import policy from "../assets/fake-data/policy";
-import Grid from "../components/Grid";
+
 import PolicyCard from "../components/PolicyCard";
 import MarginTopHeader from "../components/MarginTopHeader";
 import Section, { SectionBody } from "../components/Section";
 import { SectionSellMale } from "../components/SectionSellMale";
 import Helmet from "../components/Helmet";
-import InfinityList from "../components/InfinityList";
+import InfinityList2 from "../components/InfinityList2";
 import CheckBox from "../components/CheckBox";
 
-import productData from "../assets/fake-data/catalog/maleCatalog/products";
-import category from "../assets/fake-data/catalog/category";
+import productData from "../assets/fake-data/catalog/femaleCatalog/products";
+import category from "../assets/fake-data/catalog/femaleCatalog/category.js";
 import colors from "../assets/fake-data/catalog/product-color";
 import size from "../assets/fake-data/catalog/product-size";
+import Container3 from "../components/Container3";
 
 const Female = () => {
   const productList = productData.getAllProducts();
@@ -124,7 +125,7 @@ const Female = () => {
         <MarginTopHeader />
         <Section>
           <SectionBody>
-            <Grid col={4} mdCol={2} smCol={1} gap={20}>
+            <Container3>
               {policy.map((item, index) => (
                 <Link key={index} to="/policy">
                   <PolicyCard
@@ -134,7 +135,7 @@ const Female = () => {
                   />
                 </Link>
               ))}
-            </Grid>
+            </Container3>
           </SectionBody>
         </Section>
       </div>
@@ -261,7 +262,7 @@ const Female = () => {
           </div>
           <div className="catalog__content">
             <div className="catalog__content__title">
-              NAM <span>({products.length} sản phẩm) </span>
+              Nữ <span>({products.length} sản phẩm) </span>
             </div>
             <div className="catalog__content__description">
               <span>Thời trang nam</span> Yody mang lại sự hòa hợp về cá tính,
@@ -271,7 +272,7 @@ const Female = () => {
               <span>giày nam</span>.
             </div>
 
-            <InfinityList data={products} />
+            <InfinityList2 data={products} />
           </div>
           {modal && (
             <div
